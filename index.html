@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cute Coffee Machine ☕</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="container">
+        <h1>☕ Cute Coffee Machine</h1>
+        <div id="machine">
+          <div id="steam" class="hidden">
+            <div class="steam-puff"></div>
+            <div class="steam-puff"></div>
+            <div class="steam-puff"></div>
+          </div>
+          <div id="messages">Press the button to start!</div>
+          <div class="controls">
+            <button id="startBtn">Start Brewing</button>
+          </div>
+        </div>
+        <div id="options" class="hidden">
+          <p>🥛 Would you like sugar?</p>
+          <button class="optionBtn" data-answer="yes">Yes</button>
+          <button class="optionBtn" data-answer="no">No</button>
+        </div>
+        <div id="another" class="hidden">
+          <p>➡️ Would you like another coffee?</p>
+          <button id="anotherYes">Yes</button>
+          <button id="anotherNo">No</button>
+        </div>
+        <div id="coffeeCounter">
+          ☕ Coffees brewed: <span id="count">0</span>
+        </div>
+      </div>
+      <footer id="credits">
+        <small>
+          Brew Effect by
+          <a
+            href="https://pixabay.com/users/mightuser-46744766/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=263171"
+            >Rahul</a
+          >
+          from
+          <a
+            href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=263171"
+            >Pixabay</a
+          ><br />
+          Ding Effect by
+          <a
+            href="https://pixabay.com/users/u_31vnwfmzt6-31480456/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=126626"
+            >Shagor Miah</a
+          >
+          from
+          <a
+            href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=126626"
+            >Pixabay</a
+          ><br />
+          Made by <a href="http://github.com/pushkar404">Pushkar</a>
+        </small>
+      </footer>
+    </div>
+    <audio id="brewSound" src="brew.mp3" preload="auto"></audio>
+    <audio id="readySound" src="ding.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>

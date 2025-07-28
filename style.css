@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Baloo 2", cursive;
+  background: #f9f5f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  background: #fff7f0;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 320px;
+  position: relative;
+  flex: 1;
+}
+
+h1 {
+  color: #7c4f2c;
+  margin-bottom: 20px;
+}
+
+#machine {
+  background: #ffe8d6;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Steam container */
+#steam {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Each steam puff */
+.steam-puff {
+  width: 10px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: steamUp 2s infinite;
+}
+
+.steam-puff:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.steam-puff:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes steamUp {
+  0% {
+    transform: translateY(10px) scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-10px) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-25px) scale(0.7);
+    opacity: 0;
+  }
+}
+
+#messages {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  min-height: 40px;
+  color: #5c3d2e;
+}
+
+.controls button,
+.optionBtn,
+#anotherYes,
+#anotherNo {
+  background: #a97155;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.controls button:hover,
+.optionBtn:hover,
+#anotherYes:hover,
+#anotherNo:hover {
+  background: #8b5e3c;
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+#coffeeCounter {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #5c3d2e;
+  font-weight: bold;
+}
+
+/* Footer styling */
+footer {
+  background: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+footer#credits {
+  position: fixed;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  color: #7c4f2c;
+}
+
+footer#credits a {
+  color: #a97155;
+  text-decoration: none;
+}
+
+footer#credits a:hover {
+  text-decoration: underline;
+}
